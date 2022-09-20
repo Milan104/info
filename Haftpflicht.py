@@ -1,3 +1,4 @@
+from tkinter import N
 from dateutil import parser
 import math
 
@@ -10,14 +11,14 @@ def rückerstatt(monate_vergangen,n_wert):
     if monate_vergangen < 0:
         print("Bitte Eingabe überprüfen!")
     else:
-        prozentVerlust = (monate_vergangen*0.64166666666)
-        return (prozentVerlust * n_wert) / 100.0
+        prozentVerlust = (monate_vergangen*(7.7/12))
+        return(n_wert-(prozentVerlust * n_wert) / 100.0)
 
 
 
 n_wert = int(input("Neuwert eingeben: "))
-k_date = input("Kaufdatum angeben (Format: YYYY-MM-DD): ")
-anspruch_datum = input("Datum der Inanspruchname angeben (Format: YYYY-MM-DD):")
+k_date = input("Kaufdatum angeben (Format: YYYY-MM): ")
+anspruch_datum = input("Datum der Inanspruchname angeben (Format: YYYY-MM):")
 
 print(monate_zwischen(k_date,anspruch_datum))
 print(rückerstatt(monate_zwischen(k_date,anspruch_datum),n_wert))
