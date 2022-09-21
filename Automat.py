@@ -1,4 +1,3 @@
-
 def rueckgeld(eingabe):
     print((eingabe -(eingabe % 200))/200,"x 2 Eurostücke werden ausgegben")
     rest1 = eingabe % 200
