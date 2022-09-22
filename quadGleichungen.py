@@ -1,5 +1,4 @@
 import cmath
-import numpy as np
 import matplotlib.pyplot as plt
 
 def get_solution(a,b,c):
