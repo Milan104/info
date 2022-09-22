@@ -1,4 +1,3 @@
-from tkinter import N
 from dateutil import parser
 import math
 
